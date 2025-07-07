@@ -11,12 +11,13 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 
 
 # Replace this with your actual path or upload a CSV to the data folder
-df = pd.read_csv('../data/clash_royale_cards.csv')
+df = pd.read_csv(r'C:\Users\finap\OneDrive\Documents\GitHub\FromBIToAI\01_card_classifier\data\clash_royale_cards.csv')
 
 # 👀 Step 3: Explore the Data
 print(df.head())
 print(df.info())
-print(df['type'].value_counts())
+print(df['rarity'].value_counts())
+df['elixirCost'] = df['elixirCost'].fillna(df['elixirCost'].median())
 
 
 # Encode categorical columns
@@ -24,15 +25,15 @@ le = LabelEncoder()
 df['rarity_encoded'] = le.fit_transform(df['rarity'])
 
 # Select features and target
-features = ['elixir_cost', 'hitpoints', 'damage', 'range', 'rarity_encoded']
+features = ['elixirCost', 'Win Rate', 'Usage', 'maxLevel']
 X = df[features]
-y = df['type']  # Target: Troop, Spell, Building
+y = df['rarity_encoded']  # Target is common epic rare etc..
 
 # 🧪 Step 5: Train/Test Split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # 🤖 Step 6: Train Model
-model = LogisticRegression(max_iter=1000)
+model = LogisticRegression(max_iter=4000)
 model.fit(X_train, y_train)
 
 # 📊 Step 7: Evaluate
@@ -48,5 +49,5 @@ plt.title('Confusion Matrix')
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.tight_layout()
-plt.savefig('../outputs/confusion_matrix.png')
+plt.savefig(r'FromBIToAI\01_card_classifier\outputs')
 plt.show()
