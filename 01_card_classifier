@@ -1,0 +1,41 @@
+# 🃏 Card Classifier – Clash Royale ML Foundations
+
+This project is the first step in my "From BI to AI" journey. It introduces basic machine learning concepts through a fun and familiar lens: Clash Royale. The goal is to build a simple classifier that predicts the type of a card (Troop, Spell, or Building) based on its stats.
+
+---
+
+## 🎯 Objective
+
+- Learn the fundamentals of supervised learning
+- Explore data preprocessing, feature selection, and model evaluation
+- Build a classification model using scikit-learn
+
+---
+
+## 📊 Dataset
+
+The dataset includes Clash Royale card attributes such as:
+- Elixir cost
+- Hitpoints
+- Damage
+- Range
+- Rarity
+- Speed
+- Type (Target variable: Troop, Spell, Building)
+
+📁 Located in: `./data/clash_royale_cards.csv`  
+📌 Source: [RoyaleAPI](https://royaleapi.com/cards) (or simulated data)
+
+---
+
+## 🛠️ Tools & Libraries
+
+- Python 3.x
+- pandas
+- scikit-learn
+- matplotlib / seaborn
+- Jupyter Notebook
+
+📦 Install dependencies:
+```bash
+pip install -r requirements.txt
