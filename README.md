@@ -44,7 +44,37 @@ Clash Royale is a perfect metaphor for machine learning:
 
 Each project draws parallels between game mechanics and ML concepts to make learning more intuitive and engaging.
 
+
 ---
 
 ## 📂 Repository Structure
+clash-ml-journey/ ├── 01_card_classifier/ ├── 02_powerbi_churn_prediction/ ├── 03_sql_elixir_forecast/ ├── 04_fabric_deck_synergy/ ├── 05_rl_clash_bot/ └── README.md
+
+---
+
+Each folder contains:
+- `README.md` – Project overview and instructions
+- `notebooks/` or `scripts/` – Source code
+- `data/` – Sample or simulated datasets
+- `outputs/` – Charts, models, or dashboards
+
+---
+
+## 🚀 What's Next?
+
+- Add a Power BI dashboard to visualize project progress
+- Explore real-time ML with streaming data in Fabric
+- Contribute to open-source ML projects in the BI space
+
+---
+
+## 📬 Contact
+
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/) or check out my work at [your-portfolio-site.com].
+
+---
+
+> “The best decks aren’t just built—they’re trained.”  
+> — A BI Manager turned ML Strategist
+
 
